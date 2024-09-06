@@ -1,4 +1,4 @@
-Packages
+**Packages**
 Every Go program is made up of packages.
 
 Programs start running in package main.
@@ -6,7 +6,7 @@ Programs start running in package main.
 To use the packages you need to import them into your program. For example:
 import “fmt”
 
-Imports
+**Imports**
 To import multiple packages you can either write multiple import statements like:
 import “fmt”
 import “math”
@@ -19,7 +19,7 @@ import (
 
 Note: It is good to use the parenthesized import statement.
 
-Exported Names
+**Exported Names**
 In GO, a name is exported if it begins with a capital letter. For instance “Pi” is exported from the math package.
 
 “pi” does not start with a capital letter, so it is not exported.
@@ -29,7 +29,7 @@ You can only refer to exported names of a package after importing it. Any “une
 fmt.Println(math.pi) - will result in error
 fmt.Println(math.Pi) - will print the value of pi
 
-Functions
+**Functions**
 A function can take zero or more arguments.
 The data type of arguments comes after their names
 
@@ -49,12 +49,12 @@ A return value can be named. If there are named return values, they will be trea
 
 Named returns are used to document the meaning of return values.
 
-Naked Return
+**Naked Return**
 A return statement without arguments returns the named return values. This is known as “naked” return.
 
 Naked return statements should be used only in small functions as they can harm readability in longer functions.
 
-Variables
+**Variables**
 Variables can be declared using the “var” keyword. Variables can be declared at package or function level.
 
 var name datatype
@@ -64,7 +64,7 @@ var name datatype = value
 
 Note: If an initializer is present, the data type can be omitted. The variable will automatically take the type of initializer.
 
-Shorthand Variable Declaration
+**Shorthand Variable Declaration**
 Inside a function, a shorthand can be used to declare and initialise a variable.
 
 name := value
