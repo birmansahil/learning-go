@@ -128,6 +128,23 @@ Note: constants cannot be declared using := syntax.
 
 Numeric constants are high-precision values. An untyped constant will take the type of its value.
 
+**For Loop**
+Go only has one looping construct, the “for” loop.
+
+The basic “for” loop has three components:
+
+1. The init statement - executed before the first iteration
+2. The conditional statement - evaluated before every iteration
+3. The post statement - executed at the end of every iteration
+
+Note: Unlike other programming languages no parenthesis surround the three components of “for” statement but the braces {} are always required.
+
+The init and post statements are optional.
+
+For is Go’s while - At that point you can drop the semicolons
+
+If you omit the loop condition it loops forever, so an infinite loop is compactly expressed.
+
 **Others**
 
 %T - Shows the type of the variable
