@@ -145,9 +145,17 @@ For is Go’s while - At that point you can drop the semicolons
 
 If you omit the loop condition it loops forever, so an infinite loop is compactly expressed.
 
+**If**
+Similar to for loops, you do not need to include parenthesis but braces are required for if statements.
+
+You can also put a short statement to execute before your if statement
+
+Variables declared inside an if short statement are also available inside any else blocks.
+
 **Others**
 
 %T - Shows the type of the variable
 %v - Shows the value of the variable
 %q - Shows strings with special characters and their escape sequences
 \n - new line
+fmt.Sprint - Joins multiple arguments into a single string, without outputting it to the screen
