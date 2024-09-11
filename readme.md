@@ -152,6 +152,17 @@ You can also put a short statement to execute before your if statement
 
 Variables declared inside an if short statement are also available inside any else blocks.
 
+**Switch**
+A switch statement is a shorter way to write a sequence of if-else statements. You do not need to add a break after each statement, it automatically adds it.
+
+**Switch evaluation order**
+Switch cases evaluate cases from top to bottom, stopping when a case succeeds.
+
+Switch without a condition is the same as switch true. This can be used to write long if-then-else chains.
+
+**Defer**
+A defer statement defers the execution of a function until the surrounding function returns. The deferred call’s arguments are evaluated immediately, but the function call is not executed until the surrounding function returns.
+
 **Others**
 
 %T - Shows the type of the variable
