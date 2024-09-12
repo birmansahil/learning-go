@@ -163,6 +163,34 @@ Switch without a condition is the same as switch true. This can be used to write
 **Defer**
 A defer statement defers the execution of a function until the surrounding function returns. The deferred call’s arguments are evaluated immediately, but the function call is not executed until the surrounding function returns.
 
+**Pointers**
+Go has pointers. A pointer holds the memory address of a value.
+
+The type \*T is a pointer to a T value. Its zero value is nil.
+
+Declaration: var p \*int here p is declared but not assigned a value
+
+The & operator generates a pointer to its operand.
+i := 42
+p = &i
+
+The * operator denotes the pointer's underlying value.
+fmt.Println(*p)
+
+\*p = 21 sets i through the pointer p, this is known as “dereferencing” or “indirecting”.
+
+**Structs**
+A struct is a collection of fields.
+
+Struct fields are accessible using a dot struct.field (v.a)
+
+**Pointers to struct**
+Struct fields can be accessed through a struct pointer.
+
+To access the field x of a struct when we have a struct pointer p we could write (\*p).x
+
+However, that notation is cumbersome(large/heavy) so go permits us to instead just write p.x
+
 **Others**
 
 %T - Shows the type of the variable
