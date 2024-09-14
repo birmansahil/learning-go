@@ -191,6 +191,59 @@ To access the field x of a struct when we have a struct pointer p we could write
 
 However, that notation is cumbersome(large/heavy) so go permits us to instead just write p.x
 
+**Struct Literals**
+A struct literal denotes a newly allocated struct value by listing the values of its fields.
+
+You can list just a subset of fields by using the Name: syntax
+
+**Arrays**
+The type [n]T is an array of n values of type T.
+
+The expression var a [10]int declares a variable “a” as an array of ten integers.
+
+An array’s length is part of its declaration, so arrays can not be resized.
+
+**Slices**
+A slice is a dynamically-sized flexible view into the elements of an array.
+
+The type []T is a slice with elements of type T. A slice is formed by specifying two indices, a low and high bound, separated by a colon.
+
+a[low : high]
+
+This opens a half open range which includes the first element but excludes the last one.
+
+Slices are like references to arrays. A slice does not store any data, it just describes a section of an underlying array.
+
+Changing the elements of a slice will change the corresponding elements of the underlying array. These changes will be reflecting in other slices with the same underlying array.
+
+**Slice literals**
+
+A slice literal is like an array literal without the length.
+
+Array literal: [3] bool {true, true, false}
+
+Slice literal: [] bool {true, true, false}
+This creates an array as the above, then builds a slice to reference to it.
+
+**Slice defaults a[:]**
+When slicing, you may omit the high or low bounds to use their defaults instead.
+
+The default is zero for the low and the length of the slice for the high bound.
+
+A slice has both a length and a capacity.
+
+The length of the slice is the number of elements it contains.
+
+The capacity of the slice is the number of elements in the underlying array, counting from the first element in the slice.
+
+The length and capacity of a slice “s” can be obtained by using len(s) and cap(s)
+
+You can extend a slice’s length by re-slicing it, provided it has sufficient capacity.
+
+The zero value of a slice is nil.
+
+A nil slice has a length and capacity of 0 and has no underlying array.
+
 **Others**
 
 %T - Shows the type of the variable
