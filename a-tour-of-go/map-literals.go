@@ -18,4 +18,5 @@ var p = map[string]Person {
 
 func main() {
 	fmt.Println(p)
+	fmt.Println(p["John"])
 }
